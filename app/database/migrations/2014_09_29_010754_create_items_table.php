@@ -15,6 +15,11 @@ class CreateItemsTable extends Migration {
 		Schema::create('items', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('nombre',100);
+			$table->enum('tipo',['variable','fijo']);
+			$table->integer('valor')->nullable();
+
+			$table->integer('empresa_id');
 			$table->timestamps();
 		});
 	}

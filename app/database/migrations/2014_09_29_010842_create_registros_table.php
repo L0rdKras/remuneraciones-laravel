@@ -15,6 +15,11 @@ class CreateRegistrosTable extends Migration {
 		Schema::create('registros', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('valor');
+
+			$table->integer('trabajador_id');
+			$table->integer('item_id');
+			$table->integer('reporte_id');
 			$table->timestamps();
 		});
 	}
