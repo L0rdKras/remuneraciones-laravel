@@ -12,6 +12,7 @@ class EmpresaTableSeeder extends Seeder {
 			'nombre'	=>	'Daitocar',
 			'rut'	=>	'76.093.780-0',
 			'giro'	=>	'Venta de Repuestos',
+			'slug'	=>	'daitocar',
 			'email'	=>	'daitocar@daitocar.cl'
 		]);
 
@@ -20,6 +21,7 @@ class EmpresaTableSeeder extends Seeder {
 			'nombre'	=>	'Iconsult',
 			'rut'	=>	'76.298.728-7',
 			'giro'	=>	'Servicios Informaticos',
+			'slug'	=>	'iconsult',
 			'email'	=>	'iconsult@iconsult.com'
 		]);
 
@@ -28,6 +30,7 @@ class EmpresaTableSeeder extends Seeder {
 			'nombre'	=>	'Noriega',
 			'rut'	=>	'92.555.000-0',
 			'giro'	=>	'Venta de Repuestos',
+			'slug'	=>	'noriega',
 			'email'	=>	'noriega@noriega.cl'
 		]);
 	}

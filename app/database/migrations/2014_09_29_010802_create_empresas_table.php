@@ -18,6 +18,7 @@ class CreateEmpresasTable extends Migration {
 			$table->string('nombre',100);
 			$table->string('rut',25)->unique();
 			$table->string('giro',100);
+			$table->string('slug',100);
 			$table->string('email',100)->unique();
 			$table->timestamps();
 		});
