@@ -18,6 +18,7 @@ class CreateTrabajadoresTable extends Migration {
 			$table->string('nombre',100);
 			$table->string('rut',25)->unique();
 			$table->string('email',100)->unique();
+			$table->string('slug',100)->unique();
 			$table->string('cargo',100);
 			$table->integer('sueldo_base');
 

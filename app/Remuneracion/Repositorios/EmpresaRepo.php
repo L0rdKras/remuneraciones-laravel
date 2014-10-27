@@ -4,10 +4,10 @@ namespace Remuneracion\Repositorios;
 
 use Remuneracion\Entidades\Empresa;
 
-class EmpresaRepo{
+class EmpresaRepo extends BaseRepo{
 
-	public function find($id){
-		return Empresa::find($id);
+	public function getModel(){
+		return new Empresa;
 	}
 
 }

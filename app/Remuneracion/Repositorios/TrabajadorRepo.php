@@ -4,10 +4,10 @@ namespace Remuneracion\Repositorios;
 
 use Remuneracion\Entidades\Trabajador;
 
-class TrabajadorRepo{
+class TrabajadorRepo extends BaseRepo{
 
-	public function find($id){
-		return Trabajador::find($id);
+	public function getModel(){
+		return new Trabajador;
 	}
 
 }

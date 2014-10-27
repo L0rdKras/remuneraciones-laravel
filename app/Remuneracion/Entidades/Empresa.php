@@ -7,4 +7,3 @@ class Empresa extends \Eloquent {
 		return $this->hasMany('Remuneracion\Entidades\Trabajador');
 	}
 }
-

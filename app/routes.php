@@ -19,3 +19,11 @@
 Route::get('/',['as' => 'home', 'uses' => 'HomeController@index']);
 
 Route::get('/trabajadores/{slug}/{id}',['as' => 'empresas', 'uses' => 'TrabajadoresController@empresas']);
+
+Route::get('/{slug}/{id}',['as' => 'trabajadores', 'uses' => 'TrabajadoresController@show']);
+
+
+
+Route::get('/trabajadores/registro/{slug}/{id}',['as' => 'registro_trabajador', 'uses' => 'TrabajadoresController@registro']);
+
+Route::post('/trabajadores/registro/{slug}/{id}',['as' => 'guardar_trabajador', 'uses' => 'TrabajadoresController@guardar']);
