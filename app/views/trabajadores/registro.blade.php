@@ -10,14 +10,17 @@
 				<div class="form-group">
 					{{ Form::label('nombre','Nombre')}}
 					{{ Form::text('nombre', null ,[ 'class' => 'form-control' ]) }}
+					{{ $errors->first('nombre')}}
 				</div>
 				<div class="form-group">
 					{{ Form::label('email','Correo')}}
 					{{ Form::email('email', null ,[ 'class' => 'form-control' ]) }}
+					{{ $errors->first('email')}}
 				</div>
 				<div class="form-group">
 					{{ Form::label('sueldo_base','Sueldo Base')}}
 					{{ Form::text('sueldo_base', null ,[ 'class' => 'form-control' ]) }}
+					{{ $errors->first('sueldo_base')}}
 				</div>
 
 				<p><input type="submit" value="Guardar" class="btn btn-success"></p>

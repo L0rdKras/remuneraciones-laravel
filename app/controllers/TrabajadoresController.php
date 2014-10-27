@@ -43,14 +43,19 @@ class TrabajadoresController extends BaseController {
 		$data = Input::only(['nombre','email','sueldo_base','empresa_id']);
 
 		$rules = [
-			'nombre'	=>	'required',
-			'email'		=>	'required|email|unique:trabajadores,email'
+			'nombre'		=>	'required',
+			'email'			=>	'required|email|unique:trabajadores,email',
+			'sueldo_base'	=>	'required'
 		];
 
 		$validation= \Validator::make($data,$rules);
 
 		if($validation->passes()){
-			Trabajador::create($data);
+			//Trabajador::create($data);
+			$trabajador = new Trabajador($data);
+			$trabajador->cargo = 'Empleado';
+			$trabajador->slug = \Str::slug($trabajador->nombre);
+			$trabajador->save();
 			return Redirect::route('home');
 		}
 		return Redirect::back()->withInput()->withErrors($validation->messages());

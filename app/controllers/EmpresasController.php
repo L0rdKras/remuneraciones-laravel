@@ -1,21 +1,22 @@
 <?php
 
 //use Remuneracion\Entidades\Trabajador;
-use Remuneracion\Repositorios\TrabajadorRepo;
+use Remuneracion\Repositorios\EmpresaRepo;
 
 class EmpresasController extends BaseController {
 
-	protected $trabajadorRepo;
+	protected $empresaRepo;
 
-	public function __construct(TrabajadorRepo $trabajadorRepo){
-		$this->trabajadorRepo = $trabajadorRepo;
+	public function __construct(EmpresaRepo $empresaRepo){
+		$this->empresaRepo = $empresaRepo;
 	}
 
-	public function empleados($slug,$id)
+
+	public function listado()
 	{
-		$empleado = $this->trabajadorRepo->find($id);
+		$empresa = $this->empresaRepo->all();
 
-		return View::make('trabajadores/empresa', compact('empleado'));
+		//dd($empresa);
+		return View::make('empresas/listado', compact('empresa'));
 	}
-
 }
